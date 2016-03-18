@@ -6,6 +6,7 @@ var addEl = document.getElementById('add');
 var clearEl = document.getElementById('clear');
 // List content
 var listDisplayEl = document.getElementById('listDisplay');
+var storedListEl = document.querySelector('.storedList');
 // List item number.
 var itemCountEl = document.getElementById('itemCount');
 // Array to store item.
@@ -19,6 +20,7 @@ function submitInput() {
 	console.log(listerInputEl.value);
 	//Stores item into array.
 	inputBank.push(listerInputEl.value);
+	storedListEl.innerHTML = inputBank.join('<br />');
 	counter = (inputBank.length);
 	totalItems.push('Item ' + counter.toString() + ': ');
 	//Clears textbox for new item.
@@ -29,7 +31,7 @@ function clearInput() {
 	listerInputEl.value = '';
 };
 //Render function 
-function render() {
+clearEl.addEventListener('click', function render() {
 	//Clears html inside of section/array.
 	if ((listDisplayEl.innerHTML !== '') && (itemCountEl.innerHTML!=='')) {
 		listDisplayEl.innerHTML = '';
@@ -38,8 +40,7 @@ function render() {
 	// Display list after clear.
 	itemCountEl.innerHTML = totalItems.join('<br />');
 	listDisplayEl.innerHTML = inputBank.join('<br />');
+	storedListEl.innerHTML = '';
 	inputBank.splice(0);
 	totalItems.splice(0);
-}
-
-clearEl.addEventListener('click', render);
+});
