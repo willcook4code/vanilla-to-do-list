@@ -5,13 +5,23 @@
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 <body>
-	<textarea type='text' id="listerInput"></textarea>
-	<!--<input type="checkbox"-->
-	<button id="add" type="submit" onclick='submitInput()'>Store Item</button>
-	<button id='clear' type="submit">Overwrite Old List</button>
+	<section class="inputs">
+		<div>
+			<h2>Add List Items in Box</h2>
+			<input type='text' id="listerInput"></input>
+		</div>
+		<div>
+			<!--<input type="checkbox"-->
+			<button id="add" type="submit" onclick='	submitInput	()'>Store Item</button>
+			<button id='clear' type="submit">Save New 	List	</button>
+		</div>
+	</section>
 	<section type='text'>
-		<p class="list" id="itemCount"></p>
-		<p class="list" id="listDisplay"></p>
+		<h3>To Do Today</h3>
+		<div class="listBox">
+			<p class="list" id="itemCount"></p>
+			<p class="list" id="listDisplay"></p>
+		</div>
 	</section>
 <script type="text/javascript" src="scripts/main.js"></script>
 </body>

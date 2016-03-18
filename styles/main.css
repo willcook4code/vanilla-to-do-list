@@ -1,9 +1,51 @@
+body {
+  background: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTK7WUYJ8Y6dovrnIi6nKSBM2p9RgfXH3Ou-9kj6ciEcC_a_Oik) top left no-repeat;
+  background-size: cover;
+  width: 100%; }
+
 button {
   color: black; }
 
-.list {
+.inputs {
+  margin-top: 4em;
+  text-align: center;
+  border-bottom: 3px solid black; }
+  .inputs h2 {
+    color: silver;
+    text-shadow: 1px 2px black; }
+  .inputs #listerInput {
+    background-color: ghostwhite; }
+
+input {
+  font-size: 2em;
+  padding: 2px;
+  margin-top: .5em;
+  text-align: center; }
+
+button {
+  margin: 2em auto;
+  font-size: .8em; }
+
+body:last-child h3 {
+  text-align: center;
+  color: silver;
+  text-shadow: 1px 2px black; }
+body:last-child p {
   display: inline-block;
   overflow: hidden;
   float: left; }
+body:last-child .listBox {
+  margin: 0 35%;
+  border: 1px solid black;
+  min-height: 25em;
+  min-width: 5em;
+  background-color: ghostwhite; }
+
+#itemCount {
+  margin-left: 15%;
+  display: list-item; }
+
+#listDisplay {
+  margin-left: .5em; }
 
 /*# sourceMappingURL=main.css.map */

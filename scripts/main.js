@@ -21,11 +21,8 @@ function submitInput() {
 	inputBank.push(listerInputEl.value);
 	counter = (inputBank.length);
 	totalItems.push('Item ' + counter.toString() + ': ');
-	console.log(counter);
-	console.log(totalItems);
 	//Clears textbox for new item.
 	clearInput();
-	console.log(inputBank);
 };
 //Clears textbox for new item.
 function clearInput() {
