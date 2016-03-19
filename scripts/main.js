@@ -15,16 +15,13 @@ var totalItems = [];
 
 // Lister clicks button.
 function submitInput() {
-	var counter = 0;
+	//var counter = 0;
 	//Logs item.
 	console.log(listerInputEl.value);
 	//Stores item into array.
 	inputBank.push(listerInputEl.value);
-	counter = (inputBank.length);
-	totalItems.push('Item ' + counter.toString() + ': ');
-	//storedListEl.innerHTML = inputBank.join('<br>');
-	itemCountEl.innerHTML = totalItems.join('<br />');
-	listDisplayEl.innerHTML = inputBank.join('<br />');
+	//counter = (inputBank.length);
+	//totalItems.push(counter.toString() + ': ');
 	//Clears textbox for new item.
 	clearInput();
 };
@@ -33,16 +30,14 @@ function clearInput() {
 	listerInputEl.value = '';
 };
 //Render function 
-clearEl.addEventListener('click', function render() {
+addEl.addEventListener('click', function render() {
 	//Clears html inside of section/array.
-	// if ((listDisplayEl.innerHTML !== '') && (itemCountEl.innerHTML!=='')) {
-		listDisplayEl.innerHTML = '';
-		itemCountEl.innerHTML = '';
-	// }
-	// Display list after clear.
-	// itemCountEl.innerHTML = totalItems.join('<br />');
-	// listDisplayEl.innerHTML = inputBank.join('<br />');
-	// storedListEl.innerHTML = '';
-	// inputBank.splice(0);
-	// totalItems.splice(0);
+	listDisplayEl.innerHTML = '';
+	listDisplayEl.innerHTML = inputBank.join('<br> <br>');
 });
+clearEl.addEventListener('click', function() {
+	inputBank.splice(0);
+	totalItems.splice(0);
+	listDisplayEl.innerHTML = '';
+	itemCountEl.innerHTML = '';
+})

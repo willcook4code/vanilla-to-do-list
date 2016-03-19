@@ -39,16 +39,10 @@ body {
 
 
 body:last-child {
-	h3{
+	.title {
 		text-align: center;
 		color: silver;
     	text-shadow: 1px 2px black;
-	}
-	col {
-		display: inline-block;
-		overflow: hidden;
-		float: left;
-		font-size: 1.5em;
 	}
 	.listBox {
     	margin: 0 10%;
@@ -56,6 +50,18 @@ body:last-child {
     	min-height: 25em;
     	min-width: 5em;
     	background-color: ghostwhite;
+		.list {
+			display: block;
+    		overflow: hidden;
+    		float: left;
+    		-webkit-column-count: 4;
+		}
+		h3	{
+				margin-left: 5%;
+		}
+		p {
+			line-height: 1;
+		}
 	}
 	#clear {
 	margin: .5em 45% 10em 45%;
@@ -63,10 +69,10 @@ body:last-child {
     font-size: 0.8em;
 	}
 }
-#itemCount{
-	margin-left: 5%;
-    display: list-item;
-}
+
 #listDisplay {
-	margin-left: .5em;
+    margin-left: .5em;
+    font-size: 1.4em;
+    height: 17em;
+    width: 41.5em;
 }
