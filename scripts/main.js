@@ -5,10 +5,10 @@ var addEl = document.getElementById('add');
 // Button to clear list.
 var clearEl = document.getElementById('clear');
 // List content
+var check = '<input type="checkbox"></input>\r\n'+ '<br>';
 var listDisplayEl = document.getElementById('listDisplay');
 var storedListEl = document.querySelector('.storedList');
 // List item number.
-var itemCountEl = document.getElementById('itemCount');
 // Array to store item.
 var inputBank = [];
 var totalItems = [];
@@ -29,15 +29,17 @@ function submitInput() {
 function clearInput() {
 	listerInputEl.value = '';
 };
+
 //Render function 
 addEl.addEventListener('click', function render() {
 	//Clears html inside of section/array.
 	listDisplayEl.innerHTML = '';
-	listDisplayEl.innerHTML = inputBank.join('<br> <br>');
+	var itemCountEl = document.getElementById('itemCount').innerHTML+=check;
+	listDisplayEl.innerHTML= inputBank.join('<br> <br>');
 });
 clearEl.addEventListener('click', function() {
 	inputBank.splice(0);
-	totalItems.splice(0);
+	// totalItems.splice(0);
 	listDisplayEl.innerHTML = '';
-	itemCountEl.innerHTML = '';
+	//itemCountEl.innerHTML = '';
 })
