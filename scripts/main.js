@@ -11,7 +11,7 @@ var storedListEl = document.querySelector('.storedList');
 var itemCountEl = document.getElementById('itemCount');
 // Array to store item.
 var inputBank = [];
-var totalItems =[];
+var totalItems = [];
 
 // Lister clicks button.
 function submitInput() {
@@ -20,9 +20,11 @@ function submitInput() {
 	console.log(listerInputEl.value);
 	//Stores item into array.
 	inputBank.push(listerInputEl.value);
-	storedListEl.innerHTML = inputBank.join('<br />');
 	counter = (inputBank.length);
 	totalItems.push('Item ' + counter.toString() + ': ');
+	//storedListEl.innerHTML = inputBank.join('<br>');
+	itemCountEl.innerHTML = totalItems.join('<br />');
+	listDisplayEl.innerHTML = inputBank.join('<br />');
 	//Clears textbox for new item.
 	clearInput();
 };
@@ -33,14 +35,14 @@ function clearInput() {
 //Render function 
 clearEl.addEventListener('click', function render() {
 	//Clears html inside of section/array.
-	if ((listDisplayEl.innerHTML !== '') && (itemCountEl.innerHTML!=='')) {
+	// if ((listDisplayEl.innerHTML !== '') && (itemCountEl.innerHTML!=='')) {
 		listDisplayEl.innerHTML = '';
 		itemCountEl.innerHTML = '';
-	}
+	// }
 	// Display list after clear.
-	itemCountEl.innerHTML = totalItems.join('<br />');
-	listDisplayEl.innerHTML = inputBank.join('<br />');
-	storedListEl.innerHTML = '';
-	inputBank.splice(0);
-	totalItems.splice(0);
+	// itemCountEl.innerHTML = totalItems.join('<br />');
+	// listDisplayEl.innerHTML = inputBank.join('<br />');
+	// storedListEl.innerHTML = '';
+	// inputBank.splice(0);
+	// totalItems.splice(0);
 });

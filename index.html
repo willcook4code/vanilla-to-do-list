@@ -6,26 +6,22 @@
 </head>
 <body>
 	<section class="inputs">
-		<div>
-			<div class="storedList">
-				
-			</div>
+		<div class="leftSide">
 			<h2>Add List Items in Box</h2>
 			<input type='text' id="listerInput" placeholder="Add New Items"></input>
-		</div>
-		<div>
 			<!--<input type="checkbox"-->
+			<div>
 			<button id="add" type="submit" onclick='	submitInput()'>Store Item</button>
-			
+			</div>
 		</div>
 	</section>
 	<section type='text'>
 		<h3>To Do Today</h3>
-		<button id='clear' type="submit">Erase Old/Save New List</button>
 		<div class="listBox">
-			<p class="list" id="itemCount"></p>
-			<p class="list" id="listDisplay"></p>
+			<col class="list" id="itemCount"></col>
+			<col class="list" id="listDisplay"></col>
 		</div>
+		<button id='clear' type="submit">Clear List</button>
 	</section>
 <script type="text/javascript" src="scripts/main.js"></script>
 </body>

@@ -3,37 +3,40 @@ body {
 	background-size: cover;
 	width: 100%
 }
-button {
-	color: black;
-}
-.storedList {
-	color: white;
-}
-.inputs {
-	margin-top: 4em;
-    text-align: center;
+.inputs {    
+	text-align: center;
     border-bottom: 3px solid black;
+    padding: 1em;
+    > div {
+    	display: inline-block;
+    	overflow: hidden;
+    	padding-right: 1%;
+    }
+   	.leftSide {
+    	padding-top: 1em;
+    }
     h2 {
     	color: silver;
     	text-shadow: 1px 2px black;
+    	margin-bottom: 10px;
     }
-    #listerInput {
-    	background-color: ghostwhite;
-    	padding: .5em;
-    }
-
-}
-
-input {
+    input {
 	font-size: 1.5em;
 	margin-top: .5em;
 	text-align: center;
+	}
+    #listerInput {
+    	background-color: ghostwhite;
+    	padding: .5em;
+    	margin: 0;
+    }
+    button {
+	color: black;
+	margin: 1em auto;
+	}
+
 }
 
-button {
-	margin: 2em auto;
-	font-size: .8em;
-}
 
 body:last-child {
 	h3{
@@ -41,25 +44,27 @@ body:last-child {
 		color: silver;
     	text-shadow: 1px 2px black;
 	}
-	p {
+	col {
 		display: inline-block;
 		overflow: hidden;
 		float: left;
+		font-size: 1.5em;
 	}
 	.listBox {
-    	margin: 0 35%;
+    	margin: 0 10%;
     	border: 1px solid black;
     	min-height: 25em;
     	min-width: 5em;
     	background-color: ghostwhite;
 	}
 	#clear {
-	margin: 2em 42%
+	margin: .5em 45% 10em 45%;
+    width: 10%;
+    font-size: 0.8em;
 	}
 }
-
 #itemCount{
-	margin-left: 15%;
+	margin-left: 5%;
     display: list-item;
 }
 #listDisplay {
