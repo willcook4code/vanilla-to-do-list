@@ -23,8 +23,9 @@ body {
     text-align: center; }
   .inputs #listerInput {
     background-color: ghostwhite;
-    padding: .5em;
-    margin: 0; }
+    padding: 0.5em;
+    margin: 0;
+    width: 21em; }
   .inputs button {
     color: black;
     margin: 1em auto; }
